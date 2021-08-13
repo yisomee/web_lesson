@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*초기화*/
+ul,li{
+	margin:0; 
+	padding:0px; 
+	list-style-type:none;
+}
+
+#main{
+	width:606px;
+	border:1px solid #ddd;
+	padding:10px;
+	
+}

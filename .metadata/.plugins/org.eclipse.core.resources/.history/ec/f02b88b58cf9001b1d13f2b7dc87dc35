@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{background-color:rgb(243,187,49)}
+	#main{width:609px;height:302px;background-color:#fff;margin:0 auto;}
+	#i1, #rightDiv{float:left;}
+	#rightDiv{background-color:#ddd;width:485px;}
+</style>
+</head>
+<body>
+<div id="main">
+	<img src="wine1.jpg" id="i1"/>
+	<div id="rightDiv">
+		<img src="wine2.jpg"/><img src="wine3.jpg"/>
+		<img src="wine_title.gif"/>
+	</div>
+</div>
+</body>
+</html>
+<!-- 낮을수록 어두운색 -->

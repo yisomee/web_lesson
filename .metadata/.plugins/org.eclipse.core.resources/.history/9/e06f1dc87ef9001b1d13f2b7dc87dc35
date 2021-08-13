@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		div{width:100px; height:100px;}
+		#d1{background-color:yellow; float:left; overflow:scroll}
+		#d2{background-color:pink; float:left;}
+		#d3{background-color:lightblue; float:left;}
+		#d4{background-color:orange; clear:left;}
+	</style>
+</head>
+<body>
+<div id="d1">
+	<div style="background-color:gray"></div>
+	<div style="background-color:cyan"></div>
+</div>
+<div id="d2"></div>
+<div id="d3"></div>
+<div id="d4"></div>
+</body>
+</html>
+<!-- 
+	div는 기본적으로 세로로 배치가 된다
+	float 정렬
+ -->

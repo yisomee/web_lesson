@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img{width:100px; height:100px;}
+	
+	/*속성 선택자 
+	
+	
+	
+	*/
+	img{
+		border:3px solid red;
+	}
+</style>
+</head>
+<body>
+	<img src="../img/1.jpg" alt="자동차"/>
+	<img src="../img/images.jpg"/>
+	<img src="../img/jeju_map.jpg" title="꽃"/>
+	<img src="../img/tab2_4.png"/>
+</body>
+</html>
+<!-- 
+
+
+
+ -->

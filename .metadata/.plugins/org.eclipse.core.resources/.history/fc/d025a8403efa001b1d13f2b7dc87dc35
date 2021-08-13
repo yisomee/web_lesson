@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id ="container">
+	<div id ="d1"
+
+</div>
+</body>
+</html>
+
+<!-- 
+	컨텐츠의 폭은 지정해줘야함 폭은 이미지를 넣으려면 이미지의 크기에 영향을 받음
+	높이는 컨텐츠가 있는 만큼 자동으로 늘어남 
+	웹페이지에서는 픽셀 중요함 
+
+ -->

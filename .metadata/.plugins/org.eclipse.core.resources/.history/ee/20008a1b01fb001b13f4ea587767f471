@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+	#container{width:500px; padding:10px; float:left;}
+	.d{float:left; width:230px; height:180px; border:solid 1px; margin:10px;}
+	
+	/*
+	#d1, #d2{width:230px; height:180px; border:solid 1px; margin:10px;}
+	#first, #third{float:left;}
+
+	#q, #a{float:left; font:1.2em bold;}
+	div{width:230px; height:180px; border:solid 1px; margin:10px;}
+	ul{list-style:none; padding:10px;}
+	.que{font-weight:bold;}
+	#e{float:left;}
+*/
+
+</style>
+</head>
+<body>
+
+<div id="container">
+	<div class="d">111111</div>
+	<div class="d">222222</div>
+	<div class="d">333333</div>
+	<div class="d">444444</div>
+</div>
+<!-- 
+<div id="third">333333</div>
+<div>444444</div>
+ -->
+<!-- 
+	<div id="e">
+		<ul>
+			<li id="q">Q</li>
+			<li class="que">헐리우드 영화에서 러시안언어 주로 악당으로...</li><br/>
+			<li id="a">A</li>
+			<li>냉전시대의 산물입니다. 러시아는 미국의 오랜 숙명의 라이벌이기도 하구요...</li>		
+		</ul>
+	</div>
+	<div>
+		<ul>
+			<li id="q">Q</li>
+			<li class="que"> '독도' 이름의 유래를 알려주세요.</li><br/>
+			<li id="a">A</li>
+			<li>독도와 관련된 명칭은 시대에 따라 문헌에 아주 다양하게 나옵니다. 조선...</li>		
+		</ul>
+	</div>
+ -->
+</body>
+</html>

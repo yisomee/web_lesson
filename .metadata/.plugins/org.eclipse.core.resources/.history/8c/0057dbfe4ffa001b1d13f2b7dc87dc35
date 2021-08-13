@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#d1, #d2 #d3 #d4{width:200px; height:200px;}
+	#d1{background:pink;}
+	#d2{background:orange;}
+	#d3{background:yellow;}
+	#d4{background:cyan;}
+	/* position : 좌표지정할 수 있다.
+		속성값
+		static : position 생략시
+		relative : 좌표의 기준이 현재위치, 자신의 공간을 차지하고 있다.
+		absolute : 좌표의 기준 body
+		
+		left, right, top, bottom : 좌푶를 지정하는 속성
+	*/
+	#d1{left:100px;}
+	#d2{position:relative; top:100px; left:100px;}
+	#d3{position:absolute; left:200px; top:200px;}
+</style>
+</head>
+<body>
+<div id="d1">
+</div>
+<div id="d2">
+</div>
+<div id="d3">
+</div>
+<div id="d4">
+</div>
+</body>
+</html>

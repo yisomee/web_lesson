@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	ul, li{margin:0;padding:0;list-style-type:none;}
+	header{height:50px;background-color:yellow;width:800px;margin:0 auto;}
+	nav{height:40px;background-color:green;}
+	nav li{float:left;}
+	nav>ul{width:800px; height:40px; margin:0 auto;}
+	
+</style>
+</head>
+<body>
+	<header></header>
+	<nav>
+		<li>메뉴1</li>
+		<li>메뉴2</li>
+		<li>메뉴3</li>
+		<li>메뉴4</li>
+	</nav>
+	<section></section>
+	<footer></footer>
+</body>
+</html>
+<!-- 
+
+margin:0 auto 뭐지
+ul은 마진과 패딩을 가지고있음
+ -->

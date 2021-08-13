@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/*
+
+		font-style : font-size(글자속성), font-family(글꼴), color
+		
+		font-size : px, pt, mm, cm, in(inch)
+					em : 현재글자크기=1em, 1.5em(1.5배의 글자크기), 0.5em(절반크기),3em(3배 크기의 글자)
+*/
+	#f1{font-size:30px;
+		font-family : 돋움;
+	}
+	#f3{font-size:2em;}
+</style>
+</head>
+<body>
+	<ul>
+		<li id="f1">font style (폰트 스타일)</li>
+		<li id="f2">AAAAAAA 폰트 크기</li>
+		<li id="f3">AAAAAAA 폰트 크기</li>
+	</ul>
+</body>
+</html>

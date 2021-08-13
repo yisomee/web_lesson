@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+	colspan 속성: 칸 병합
+
+ -->
+<table>
+	<tr>
+		<td>AAAAAA</td>
+		<td colspan="2">BBBBBB</td>
+		<td>CCCCCCC</td>
+	</tr>
+</table>
+</body>
+</html>

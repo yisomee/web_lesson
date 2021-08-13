@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* 자손선택자*/
+	body>ul{color:red;}
+	div>ul{color:green;}
+	
+	/*후손 선택자*/
+	div li{background-color:pink;}
+	div b{font-size:2em;}
+</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>11111111</li>
+			<li>22222222</li>
+			<li>33333333</li>
+		</ul>
+	</div>
+	<div>
+		<p>문단을 <b>정의</b>하는 태그</p>	
+	</div>
+	<ul>
+		<li>AAAAAAAA</li>
+		<li>BBBBBBBB</li>
+		<li>CCCCCCCC</li>
+	</ul>
+</body>
+</html>
+<!-- 
+	기준 하위에 있는 모든 선택자 -> 후손선택자
+	자손은 바로 하위에 있는 태그같음
+ -->

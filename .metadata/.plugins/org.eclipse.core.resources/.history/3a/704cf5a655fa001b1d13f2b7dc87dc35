@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="d1">
+	<img src="title_layer.gif"/>
+</div>
+<div id="d2">
+	<img src="glass1.gif"/>
+</div>
+<div id="d3">
+	<img src="glass2.gif"/>
+</div>
+<div id="d4">
+	<img src="glass3.gif"/>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* 선택자 {속성:속성값; 속성:속성값;,,,,,}
+	태그,아이디,클래스	
+*/
+h1, li{
+	color:red;
+}
+/*
+	a태그(링크테그)에 스타일적용하기
+	
+	(상태선택자)
+	a:link -> 링크가 걸린 상태일때
+	a:visited -> 방문한 홈페이지일때
+	a:hovor -> 링크주소에 마우스 오버했을때
+	a.active -> 링크에 마우스를 누른 상태일때
+	
+	text-decoration 속성 -> 밑줄(underline), 윗줄(overline), 취소선(linethrough), 선없음(none)
+	rgb 숫자가 클수록 진한색
+	링크색상 지정해줘도 다녀온 페이지에 대한 색상은 설정을 따로 해줘야함
+
+*/
+a:link{text-decoration:none; color:#555;}
+a:visited{text-decoration:none; color:#555;}
+a:hovor{text-decoration:underline; color:Green; font-weight:bold;}
+a.active{color:orange;}

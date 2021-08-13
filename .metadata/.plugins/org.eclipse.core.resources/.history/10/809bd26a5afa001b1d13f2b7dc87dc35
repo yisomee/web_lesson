@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img{width:100px; height:100px;}
+</style>
+</head>
+<body>
+	<img src="../img/1.jpg"/>
+	<img src="../img/images.jpg"/>
+	<img src="../img/jeju_map.jpg"/>
+	<img src="../img/tab2_4.png"/>
+</body>
+</html>

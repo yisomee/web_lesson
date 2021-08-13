@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>홈페이지 제목</title>
+</head>
+<body>
+My Home<br/><br/>
+<p>스테파노 라바리니 감독이 이끄는 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;한국 여자배구 대표팀은 4일 일본 도쿄 아리아케 아레나에서 열린 도쿄올림픽 여자 배구 8강전에서 터키에
+ 풀세트 접전 끝에 3대2(17-25 25-17 28-26 18-25 15-13)로 이겼다. </p> p한국은 4위를 차지한 런던올림픽에 이어 9년 만에 다시 4강 진출의 감격을 누렸다.
+라바리니는 이날 <s>김연경과 박정아</s>를 레프트로 투입하고, <i>라이트에 김희진</i>을 기용했다. 높이와 공격력에 비중을 둔 라인업이다. 
+세터는 염혜선, <b>센터는 양효진과 김수지가 선발 출전</b>했다. 리베로는 오지영이 코트에 섰다.
+
+<!--  주석문
+	sub:아래첨자 log2
+	
+	sup:위첨자 x2
+	 -->
+&lt;log<sub>2</sub>,x<sup>2</sup>&gt;
+<pre>
+	pre 태그는 enter가 적용된다.
+	html태그도 적용된다.
+	pre태그는          spacebar 적용된다.
+</pre>
+<h1 title="문자에 링크걸기">문자에 링크걸기</h1>
+<pre>
+       _blank : 새로운 창에 페이지 열기
+</pre>
+<a href="../index.html">홈페이지</a>
+<a href="/webApp/index.html">홈페이지</a>
+<a href="https://www.nate.com/" target="_blank" title="풍선도움말">네이트</a>
+
+<h2>이미지에 링크걸기</h2>
+
+<h3>같은페이지에 특정위치로 링크걸기</h3>
+<h6>map을 이용한 링크걸기</h6>
+</body>
+</html>

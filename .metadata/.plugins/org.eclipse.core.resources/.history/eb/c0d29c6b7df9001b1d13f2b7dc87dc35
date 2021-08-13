@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		div{width:100px; height:100px; float:left;}
+		#d1{background-color:yellow;}
+		#d2{background-color:pink;}
+		#d3{background-color:lightblue;}
+	</style>
+</head>
+<body>
+<div id="d1"></div>
+<div id="d2"></div>
+<div id="d3"></div>
+</body>
+</html>
+<!-- 
+div는 기본적으로 밑으로 배치가 된다
+ -->

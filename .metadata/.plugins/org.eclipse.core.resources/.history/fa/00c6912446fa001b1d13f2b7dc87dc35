@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img{width:200px; height:200px;}
+	
+	/*
+		border-style : 선모양(solid:실선, dotted:점선, dashed(), double(이중선), groove(홈), inset(볼록))
+				border-right-style, border-lefr-style, border-top-style, border-bottom-style
+	
+	*/
+	img{
+	/*
+		border-style: dotted;
+		border-right-style: double;
+		*/
+		
+		border-style:solid dotted dashed doubble;
+		border-width:10px;
+	}
+</style>
+</head>
+<body>
+<img src="../img/1.jpg"/>
+<img src="../img/images.jpg"/>
+<img src="../img/jeju_map.jpg"/>
+<ul>
+	<li>Border 속성</li>
+	<li>style : 선모양</li>
+	<li>width : 선의 두께</li>
+	<li>color : 선의색상</li>
+</ul>
+</body>
+</html>

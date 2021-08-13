@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+	<li id="first">첫번째</li>
+	<li>두번째</li>
+</ul>
+<img src="../img/1.jpg" id="i1"/>
+
+<script>
+	//자바스크립트에서 스타일시트 적용하기
+	
+	//background, background-color, background-image, background-posotion,...... 
+	//자스는 font-size ->fontSize
+	document.getElementById("first").style.backgroundColor="pink";
+</script>
+</body>
+</html>
