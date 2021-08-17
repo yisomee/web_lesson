@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+ #main{
+ 	background-color:#B0E0E6;
+ 	width:1200px;
+ 	margin:0 auto;
+ }
+ #container{
+ 	background-color:#F5FFFA;
+ 	margin:0 auto;
+ 	width:900px;
+ }
+ #main>#container>#topimg>div>img{
+ 	width:140px;
+ 	height:330px;
+	float:left;
+	margin:0 15 0 35;
+ }
+ 
+ #imgicon{
+ 	display:grid;
+ 	grid-template-columns:100px 100px 100px 100px;
+ 	grid-template-rows:320px 120px;
+ }
+ #tag{
+ 	clear:left;
+ }
+
+</style>
+</head>
+<body>
+<div id="main">
+	<div id="container">
+		<header>
+			<div><img src="css_gaon_02.jpg"/>
+			</div>
+			<div><img src="css_gaon_03.jpg"/>
+			</div>
+			<div><img src="css_gaon_04.jpg"/>
+			</div>
+			<div><img src="css_gaon_05.jpg"/>
+			</div>
+			<div><img src="css_gaon_06.jpg"/>
+			</div>
+		</header>
+		<div id="tag"><img src="css_gaon_08.jpg"/>
+		</div>
+		<nav id="tab">
+			<li>COMPANY</li>
+			<li>STEELHOUSE</li>
+			<li>ARCHITECTURE</li>
+			<li>INTERIOR</li>
+			<li>COMMUNITY</li>
+		</nav>
+		<div id="밑부분 사진">
+		
+		</div>
+		<div id="얇은 메뉴">
+		
+		</div>
+<!-- 		<div>
+			<div>01.자주하시는 질문</div>
+			<div>02.질문과 답변</div>
+			<div>03.채용안내</div>		
+		</div>
+		<div id="imgicon">
+			<div><img src="g1.png"/><br/>
+			멋진 인테리어
+			</div>
+			<div><img src="g2.png"/><br/>
+			이쁜 실내
+			</div>
+			<div><img src="g3.png"/><br/>
+			아파트단지
+			</div>
+			<div><img src="g1.png"/><br/>
+			회의실 내부
+			</div>
+			<div><img src="g1.png"/><br/>
+			멋진 인테리어
+			</div>
+			<div><img src="g2.png"/><br/>
+			이쁜 실내
+			</div>
+			<div><img src="g3.png"/><br/>
+			아파트단지
+			</div>
+			<div><img src="g3.png"/><br/>
+			회의실 내부
+			</div>
+		</div>	 -->
+		
+	</div>
+
+</div>
+</body>
+</html>

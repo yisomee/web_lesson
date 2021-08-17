@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+				
+<style>
+
+</style>
+</head>
+<body>
+<div id="main">
+	<div id="container">
+		<header>
+			<div><img src="css_gaon_02.jpg"/>
+			</div>
+			<div><img src="css_gaon_03.jpg"/>
+			</div>
+			<div><img src="css_gaon_04.jpg"/>
+			</div>
+			<div><img src="css_gaon_05.jpg"/>
+			</div>
+			<div><img src="css_gaon_06.jpg"/>
+			</div>
+		</header>
+		<div id="sideimg"><img src="css_gaon_08.jpg"/>
+		</div>
+		<nav id="menutab">
+			<li>COMPANY</li>
+			<li>STEELHOUSE</li>
+			<li>ARCHITECTURE</li>
+			<li>INTERIOR</li>
+			<li>COMMUNITY</li>
+		</nav>
+		<div id="bottomimg">
+			<div><img src="css_gaon_15.png"/>
+			</div>
+			<div><img src="css_gaon_16.png"/>
+			</div>
+			<div><img src="css_gaon_17.png"/>
+			</div>
+			<div><img src="css_gaon_18.png"/>
+			</div>
+			<div><img src="css_gaon_19.png"/>
+			</div>
+		</div>
+		<div>
+			<img src="css_gaon_22.png"/>
+			<img src="css_gaon_24.png"/>			
+		</div>
+		<ul>			
+			<li>01.자주하시는 질문</li>
+			<li>02.질문과 답변</li>
+			<li>03.채용안내</li>		
+		</ul>
+		<div id="imgicon">
+			<div><img src="g1.png"/><br/>
+			멋진 인테리어
+			</div>
+			<div><img src="g2.png"/><br/>
+			이쁜 실내
+			</div>
+			<div><img src="g3.png"/><br/>
+			아파트단지
+			</div>
+			<div><img src="g1.png"/><br/>
+			회의실 내부
+			</div>
+			<div><img src="g1.png"/><br/>
+			멋진 인테리어
+			</div>
+			<div><img src="g2.png"/><br/>
+			이쁜 실내
+			</div>
+			<div><img src="g3.png"/><br/>
+			아파트단지
+			</div>
+			<div><img src="g3.png"/><br/>
+			회의실 내부
+			</div>
+		</div>	
+		<div><img src="css_gaon_31.png"/>
+		</div>
+		
+	</div>
+
+</div>
+</body>
+</html>

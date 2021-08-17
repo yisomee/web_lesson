@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+				
+<style>
+#main{
+ 	background-color:#78E150;
+ 	margin:0 auto;
+}
+#container{
+ 	background-color:white;
+ 	margin:0 auto;
+ 	width:1000px;
+ }
+#main>#container>header>img, .bottomimg {
+	width:145px;
+	margin:0px;
+}
+.menutab{
+	display:inline-block;
+	margin-left:20px;
+}
+
+nav{
+	border: solid 1px #78E150;
+	background-color:#78E150;
+	width:915px;
+}
+ul{
+	float:left;
+	position:relative;
+ 	top:0px;
+ 	left:150px;	
+}
+ul, li{
+	list-style-type: none;
+}
+ #imgicon{
+ 	display:grid;
+ 	grid-template-columns:85px 85px 85px 85px;
+ 	grid-template-rows:100px 100px;
+ }
+ header, #topic, .bottomimg, footer{
+ 	position:relative;
+ 	top:0px;
+ 	left:168px;	
+ }
+ #imgicon{
+ 	position:relative;
+ 	top:0;
+ 	left:380px;
+ }
+ #foot{
+ 	width:750px;
+ }
+ div>ul>li{
+ 	border: 1px solid;
+ 	margin-bottom:20px;
+ 	padding:5px 100px 5px 3px;
+ }
+
+</style>
+</head>
+<body>
+<div id="main">
+	<div id="container">
+		
+		<header>
+			<img src="css_gaon_02.jpg"/>			
+			<img src="css_gaon_03.jpg"/>			
+			<img src="css_gaon_04.jpg"/>			
+			<img src="css_gaon_05.jpg"/>			
+			<img src="css_gaon_06.jpg"/>			
+		</header>
+		<nav>
+			<img src="css_gaon_08.jpg" id="banner"/>
+			<li class="menutab">COMPANY</li>
+			<li class="menutab">STEELHOUSE</li>
+			<li class="menutab">ARCHITECTURE</li>
+			<li class="menutab">INTERIOR</li>
+			<li class="menutab">COMMUNITY</li>
+		</nav>
+		<div>
+			<img src="css_gaon_15.jpg" class="bottomimg"/>			
+			<img src="css_gaon_16.jpg" class="bottomimg"/>			
+			<img src="css_gaon_17.jpg" class="bottomimg"/>			
+			<img src="css_gaon_18.jpg" class="bottomimg"/>			
+			<img src="css_gaon_19.jpg" class="bottomimg"/>			
+		</div>
+		<div id="topic">
+			<img src="css_gaon_22.jpg"/>
+			<img src="css_gaon_24.jpg"/>			
+		</div>
+		<ul>			
+			<li>01.자주하시는 질문</li>
+			<li>02.질문과 답변</li>
+			<li>03.채용안내</li>		
+		</ul>
+		<div id="imgicon">
+			<div><img src="g1.png"/><br/>
+			멋진 인테리어
+			</div>
+			<div><img src="g2.png"/><br/>
+			이쁜 실내
+			</div>
+			<div><img src="g3.png"/><br/>
+			아파트단지
+			</div>
+			<div><img src="g1.png"/><br/>
+			회의실 내부
+			</div>
+			<div><img src="g1.png"/><br/>
+			멋진 인테리어
+			</div>
+			<div><img src="g2.png"/><br/>
+			이쁜 실내
+			</div>
+			<div><img src="g3.png"/><br/>
+			아파트단지
+			</div>
+			<div><img src="g3.png"/><br/>
+			회의실 내부
+			</div>
+		</div>	
+		<footer><img src="css_gaon_31.jpg" id="foot"/>
+		</footer>
+		
+	</div>
+
+</div>
+</body>
+</html>
