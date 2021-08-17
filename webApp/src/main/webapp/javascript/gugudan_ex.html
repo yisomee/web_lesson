@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function cal(first,second){
+            var r ="";
+            for(i=2; i<=9; i++){ // 자바스크립트는 처음 넣는 데이터값에 의해서 데이터 타입이 정해짐
+                r += first + "*" +i +"="+(first*i)+ "<br/>";
+
+
+            }
+
+            console.log(r);
+            document.getElementById("result").innerHTML = r;
+        }
+    </script>
+
+</head>
+<body>
+<label>첫번째 수</label> : <input type="text" id="first"><br/>
+<label>두번째 수</label> : <input type="text" id="second"><br/>
+<input type="button" value="결과확인" onclck="cal(first,second)">
+<div>결과를 확인하시오.</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //문자를 숫자로 형변환
+        var a = "5";
+        var b = "6a";
+        var c = 5;
+
+        document.write(isNaN(a)+",");
+        document.write(isNaN(b)+",");
+        document.write(isNaN(c)+"<br/>");
+
+        document.write(a * c);
+
+
+        function calcu() {
+            var n1obj = document.getElementById("num1")
+            var n1 = n1obj.value;   //"5"
+            // document.getElementById("num1").value=125; 이건 대입식이다 num1에 125 대입
+            var n2obj = document.getElementById("num2")
+            var n2 = n2obj.value;   //"6"
+            if (!isNaN(n1) && !isNaN(n2)) {
+                var n1Int = parseInt(n1);
+                var n2Int = parseInt(n2); //실수는 parseFloat
+                var add = n1Int + n2Int;
+                var minus = n1Int - n2Int;
+                var mul = n1Int * n2Int;
+                var div = n1Int / n2Int;
+
+                var r = n1 + "+" + n2 + "=" + add + "<br/>";
+                r += n1 + "-" + n2 + "=" + minus + "<br/>";
+                r += n1 + "*" + n2 + "=" + mul + "<br/>";
+                r += n1 + "/" + n2 + "=" + div + "<br/>";
+
+                document.getElementById("result").innerHTML = r;
+
+
+             }else {
+                document.getElementById("result").innerHTML = "값을 잘못입력하였습니다";
+            }
+            //초기화
+            n1obj.value = "";
+            n2obj.value = "";
+        }
+    </script>
+</head>
+<body>
+첫번째 수 : <input type="text" id="num1"/><br/>
+두번째 수 : <input type="text" id="num2"/><br/>
+<input type="button" value="결과보기" onclick="calcu()"/>
+<div id="result"></div>
+</body>
+</html>

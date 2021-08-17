@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Array를 이용한 배열생성
+
+    //배열생성
+    var arr = new Array();//초기값 없이 생성
+
+    arr[2] = 100;
+    arr[5] = "홍길동";
+
+    arr[2] = "String";
+
+    for(i=0; i<arr.length; i++){
+        document.write("arr["+i+"]=", arr[i]+"<br/>");
+    }
+    var arr2 = new Array("초기값", 200, "서울시 마포구", 14.5);//초기값주면서 생성
+    arr2[10] = 1234;
+    document.write("<ol>")
+    for(var i=0; i<arr2.length; i++){
+        document.write("<li>"+ arr2[i]+"</li>");
+    }
+    document.write("</ol>")
+
+    var arr3 = [1000, 2000, '홍길동', '010-0000-1111']; //2와 마찬가지로 초기값 주면서 생성
+
+    //배열의 마지막 index+1 번째 값 추가하기
+    arr3.push(12122);//이렇게 넣어주면 맨끝으로 추가되어 들어간다.
+
+    //배열의 마지막값을 제거한다.
+    arr3.pop();
+
+    for(var i=0; i<arr3.length; i++){
+        document.write("<br/>"+"arr3["+i+"]=", arr3[i]);
+    }
+
+    //문자를 join한다
+    var arrJoinData =  arr3.join("/");
+    document.write("<br/>"+"join=>"+ arrJoinData);
+
+    //shift : 오른쪽의 값이 왼쪽으로 이동
+    //unshift : 왼쪽의 값이 오른쪽으로 이동
+    arr3.shift();
+    document.write("<br/>"+arr3.join('&')); //배열의 길이도 줄어든다 앞에 1000이 사라짐
+
+    arr3.unshift('aaa@nate.com');//데이터의 값이 사라지지않음음
+   document.write("<br/>" + arr3.join("#"));
+
+   //JSon: JavaScript Object notation
+
+    var jData = {username:'홍길동', tel:'010-1234-5678', age:50,
+                email:{f_email:'aaaa@nate.com', s_email:'bbbb@daum.net'}
+                }
+    document.write("<br/>이름 = ", jData.username);
+    document.write("<br/>연락처 =", jData.tel);
+
+    document.write("<br/>이메일= ", jData.email.f_email);
+</script>
+
+
+</body>
+</html>

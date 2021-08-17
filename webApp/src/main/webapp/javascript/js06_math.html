@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    function mathTest() {
+        //수학함수
+        var n = 123.568;
+        document.write("pi->" + Math.PI);
+        document.write("pow->" + Math.pow(3, 4)); //3의 4승
+
+        document.write("<br/>round->" + Math.round(n));
+        document.write("<br/sqrt->" + Math.sqrt(10));
+
+        document.write("<br/>abs->" + Math.abs(-88));
+        document.write("<br/>ceil->" + Math.ceil(n)); //올림
+        document.write("<br/>floor->" + Math.floor(n)); //내림
+
+        document.write("<br/>max->" + Math.max(85, 4, 56, 87, 4, 64, 859, 54));
+        document.write("<br/>min->" + Math.max(85, 4, 56, 87, 4, 64, 859, 54));
+
+        document.write("<br/>random->" + Math.random()); //0~1 사이의 값
+    }
+    //함수 호출
+   mathTest();
+    </script>
+
+</head>
+<body onload=""><!--바디에 있는 실행문이 모두 실행되면 onload가 실행됨
+document는 실행이 끝나고 온로드에 의해 다시 실행될때 그전에 내용을 지워버리고 새로운 도큐멘트를 쓴다
+innerHTML 쓰던가 해야함 write는 많이 쓰이진 않음
+-->
+<img src="../img/1.jpg"/>
+</body>
+</html>
