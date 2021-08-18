@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <style>
+        body{
+            background-color: #ddd;
+            margin: 0;
+        }
+        #container{
+            width: 700px;
+            background-color: #fff;
+            margin:0 auto;
+        }
+        ul,li{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        a:link, a:visited a:hover{
+            text-decoration: none;
+            color: gray;
+        }
+        li{
+            padding: 5px 152px 5px 153px;
+            text-align: center;
+        }
+        #backicon{
+            width: 12px;
+        }
+        .logo{
+            width: 150px;
+            margin: 130px 0 30px;
+        }
+        /*다른 로그인*/
+        #container li:nth-of-type(2){
+            text-align: right;
+        }
+        form input:not([type=checkbox]){
+            width: 395px;
+            height: 50px;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        input[type=submit]{
+            width: 410px;
+            background-color: #0074D9;
+            color: white;
+        }
+        form>div{
+            overflow: auto;
+        }
+        form>div>div:first-of-type{
+            float: left;
+        }
+        form>div>div:last-of-type{
+            float: right;
+        }
+        #container>ul>li:last-of-type{
+            border-top:1px solid #ddd;
+            padding: 20px 0 50px;
+        }
+    </style>
+    <script>
+        function logCheck(){
+            //아이디와 비밀번호 있는지 없는지 확인
+            var id = document.getElementById("userid").value
+            if(id==""){
+                alert("아이디를 입력하세요");
+                return flase;
+            }
+            if(document.getElementById("userpwd").value==""){
+                alert("비밀번호를 입력하세요..");
+                return  false;
+            }
+            //id와 password를 모두 입력받은 경우
+            return true;
+        }//false를 리턴하면 액션으로 안감
+    </script>
+</head>
+<body>
+<div id="container">
+    <ul>
+        <li><a href="https://www.daum.net"><img src="daumlogo.png" class="logo"/></a></li>
+        <li><a href="#"><img src="back.png" id="backicon"/>다른 방법으로 로그인</a></li>
+        <li>
+            <form method="post" action="login.jsp" onsubmit=" return logCheck()">
+                <input type="text" name="userid" id="userid" placeholder="아이디"/>
+                <input type="password" name="userpwd" id="userpwd" placeholder="비밀번호"/>
+                <!--        submit, button, image
+                            button 태그: submit의 기능을 가지고 있다.
+                -->
+                <input type="submit" value="로그인"/>
+                <div>
+                    <div><input type="checkbox" name="save"><a href="#">로그인 상태 유지</a></div>
+                    <div><a href="#">IP보안</a><a href="#">ON</a></div>
+                </div>
+            </form>
+        </li>
+        <li>
+            <a href="#">아이디 찾기</a> |
+            <a href="#">비밀번호 찾기</a>
+        </li>
+        <li>
+            <img src="banner.png"/>
+        </li>
+        <li>
+            <a href="#">&copy;KaKao Crop.</a>  |   <a href="#">고객센터</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

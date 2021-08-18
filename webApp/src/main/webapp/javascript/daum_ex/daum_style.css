@@ -1,0 +1,98 @@
+body{
+    background-color: lightgray;
+    margin: 0;
+}
+.container{
+    width: 700px;
+    height: 900px;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.anotherLogin{
+    width:400px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+anotherLogLink{
+    font-size: 0.8em;
+    margin-bottom: 15px;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#logoicon{
+    width:140px;
+    margin-top:60px;
+    margin-bottom:20px;
+}
+#back{
+    width:15px;
+}
+input{
+    width:400px;
+    height:50px;
+
+}
+.inputlog{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;;
+}
+.inputlog input{
+    margin-bottom: 10px;
+}
+#logstate{
+    margin-right: 0;
+    width: 22px;
+    height: 22px;
+}
+.bottomMenu{
+    width: 420px;
+    display: flex;
+    margin-top: 10px;
+   /* justify-content: space-between;*/
+}
+#loginBtn{
+    width:410px;
+    height: 50px;
+    background-color: #4C87EE;
+    border: none;
+    color: white;
+    font: 1.2em bold;
+}
+#secu{
+   margin-left: 180px;
+    font-weight: bold;
+}
+.findlog{
+    margin-top: 35px;
+    margin-bottom: 100px;
+}
+#on{
+    color: #0074D9;
+}
+#footer{
+    font-size: 0.8em;
+}
+hr{
+    border:0;
+    width: 700px;
+    overflow: visible;
+}
+#bannerimg{
+    margin-bottom: 50px;
+}
