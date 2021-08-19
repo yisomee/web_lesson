@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #d1{
+            height: 200px;
+            background-color: pink;
+            padding: 50px;
+        }
+        #d1>div{
+            height: 100px;
+            background-color: lightblue;
+            padding: 50px;
+        }
+        #d1 h1{
+            background-color: lightgray;
+        }
+    </style>
+    <script>
+        var cnt=0;
+        function mouseOverTest(){
+            document.getElementById("view").innerHTML="<h1>"+ ++cnt+"</h1>";
+        }
+        var count=0;
+        function mouseOutTest(){
+            document.getElementById("view2").innerHTML = "<h1>"+ ++count+"</h1>";
+        }
+        function cursorTest(id){
+            id.style.fontSize = "3em";
+            id.style.backgroundColor = "pink";
+        }
+        function cursorTest2(blur){
+            blur.style.fontSize="1em";
+        }
+        /*
+      onmouseover, onmouseout : 이벤트객체 내부의 각 태그마다 이벤트가 발생한다.
+
+      onmouseenter : over
+      onmouseleave : out
+
+      onmousedown
+      onmouseup
+      onmousemove
+
+      onfocus : 객체에 커서가 들어가면
+      onblur : 객체에서 커서가 나가면
+     */
+    </script>
+
+</head>
+<body>
+<div>
+    <input type="text" name="userid" id="userid" onfocus="cursorTest(this)" onblur="cursorTest2(this)"/><br/><!--커서가 들어오면 함수가 실행됨-->
+    <input type="text" name="username" id="username" onfocus="cursorTest(this)" onblur="cursorTest2(this)"/><br/>
+    <input type="button" value="클릭"/><br/>
+</div>
+<!-- <div id="d1" onmouseover="mouseOverTest()" onmouseout="mouseOutTest()">-->
+<div id="d1" onmouseenter="mouseOverTest()" onmouseleave="mouseOutTest()" onmousedown="this.style.backgroundColor='yellow'">
+    <div>
+        <h1>MouseOver, MouseOut 테스트</h1>
+    </div>
+</div>
+<div id="view"></div>
+<div id="view2"></div>
+</body>
+</html>

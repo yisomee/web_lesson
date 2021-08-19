@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .container{
+      display: flex;
+      width: 1100px;
+      height: 170px;
+      margin: 0 auto;
+    }
+    button{
+      width: 50px;
+    }
+    .view{
+      width: 1000px;
+      background-color: yellow;
+    }
+    img{
+      height: 170px;
+    }
+    .posterBox{
+      width:2500px;
+    }
+  </style>
+    <script>
+        var poster;
+        var interval;
+        function moveLeft(){
+            poster = document.getElementById('posterBox');
+            poster.scrollBy(10, 0);
+        }
+        function setIntervalStart(){
+            interval = setInterval("moveLeft()",500);
+        }
+    </script>
+</head>
+<body onload="setIntervalStart()">
+<div class="container">
+  <button>◁</button>
+  <div class="view">
+      <div class="posterBox">
+        <img src="movie01.png"/><img src="movie02.png"/><img src="movie03.png"/><img src="movie04.png"/><img src="movie05.png"/><img src="movie06.png"/><img src="movie07.png"/><img src="movie08.png"/><img src="movie09.png"/><img src="movie10.png"/><img src="movie11.png"/><img src="movie12.png"/><img src="movie13.png"/><img src="movie14.png"/><img src="movie15.png"/><img src="movie16.png"/><img src="movie17.png"/><img src="movie18.png"/><img src="movie19.png"/><img src="movie20.png"/>
+      </div>
+  </div>
+  <button>▷</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+        document.write("protocol = "+ location.protocol);//현재 페이지서버의 프로토콜 구해줌 ->http:출력됨
+        document.write("<br/>port= "+ location.port);//9090
+        document.write("<br/>hostname ="+location.hostname);
+        document.write("<br/>host ="+ location.host); //hostname+port ->localhost:63342 출력됨
+
+        //location.href = "https://www.nate.com";//자동으로 페이지 이동
+        //location.href="../index.html";
+
+        location.reload(true);//현재페이지를 다시 실행한다. 강사님은 true안쓰셨는데 왜 여긴 적어야하는지
+
+
+
+</script>
+</body>
+</html>
