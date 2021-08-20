@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style>
+        #d1{height:200px;background-color:pink;padding:50px;}
+        #d1>div{height:100px;background-color:lightblue;padding:50px;}
+        #d1 h1{background-color:orange;}
+    </style>
+    <script>
+        /*
+             onmouseover, onmouseout: 이벤트객체 내부의 각 태그마다 이벤트가 발생한다.
+
+             onmouseenter: over
+             onmouseleave: out   이벤트객체 내부의 각 태그는 이벤트가 발생하지 않는다.
+
+             onmousedown :마우스 누를때
+             onmouseup: 마우스 뗄때
+             onmousemove
+
+             onfocus: 객체에 커서가 들어가면
+             onblur: 객체에서 커서가 나가면
+
+             onsubmit :
+             onreset : 폼안에 데이더 지우는거
+
+             onkeydown : 누른상태
+             onkeypress : 누른상태
+             onkeyup : 누른후 놓을때
+
+             onchange: value의 값이 변경되면 발생한다.
+         */
+        var cnt=0;
+        function mouseOverTest(){
+            document.getElementById("view").innerHTML = "<h1>"+ ++cnt + "</h1>";
+        }
+        var count=0;
+        function mouseOutTest(){
+            document.getElementById("view2").innerHTML = "<h1>"+ ++count + "</h1>";
+        }
+        function cursorTest(id){
+            id.style.fontSize = "3em";
+            id.style.backgroundColor = "#ddd";
+        }
+        function cursorTest2(blur){
+            blur.style.fontSize="1em";
+        }
+
+        function formCheck(){
+            if(document.frm.userid.value==""){
+                alert("아이디를 입력하세요..");
+                return false;
+            }
+            if(document.getElementById("username").value==""){
+                alert("비밀번호를 입력하세요..");
+                return false;// 함수실행을 종료시킨다.
+            }
+            //javascript에서 submit발생시킨다.
+            document.getElementById("frm").submit(); //frm: id
+            //document.frm.submit(); // frm: name
+        }
+        // userid 에는 영문자만 입력되도록 설정
+        function keyCheck(){
+            //방금 입력된 key의 코드를 구하면
+            var key = event.keyCode; // 65~90  97~122  대소문자
+            if(!(key>=65 && key<=90 || key>=97 && key<=122)){ //영문자 //  &&,|| 같이있으면 &&가 먼저실행됨 그래서 괄호안해도됨.
+                //영문자외의 문자가 입력됐을떄
+                event.returnValue = false;
+            }
+        }
+        function dataChange(){
+            console.log("데이터 바뀜...");
+        }
+
+    </script>
+</head>
+<body>
+
+<div>
+    <form name="frm" id="frm" method="get" action="test.jsp">
+        <input type="text" name="userid" id="userid" onfocus="cursorTest(this)" onblur="cursorTest2(this)"
+               onkeydown="keyCheck()"/><br/>
+        <input type="text" name="username" id="username" onfocus="cursorTest(this)" onblur="cursorTest2(this)"
+               onchange="dataChange()"/><br/>
+
+        <input type="button" value="클릭button" onclick="formCheck()"/><br/>
+
+        <input type="submit" value="submit"/><br/>
+        <input type="image" src="../img/kakao3.png" style= width:100px;/>
+        <button>등록</button>
+    </form>
+</div>
+<div id="d1" onmouseenter="mouseOverTest()" onmouseleave="mouseOutTest()"
+     onmousedown="this.style.backgroundColor='yellow'">
+    <!-- <div id="d1" onmouseover="mouseOverTest()" onmouseout="mouseOutTest()"> -->
+    <!-- <div id="d1" onmouseenter="mouseOverTest()" onmouseleave="mouseOutTest()"> -->
+    <div>
+        <h1>Mouseover, Mouseout 테스트</h1>
+    </div>
+</div>
+<div id="view"></div>
+<div id="view2"></div>
+</body>
+</html>

@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        function cal(first,second){
-            var r ="";
-            for(i=2; i<=9; i++){ // 자바스크립트는 처음 넣는 데이터값에 의해서 데이터 타입이 정해짐
-                r += first + "*" +i +"="+(first*i)+ "<br/>";
+    function calcu(){
 
+        var n1 = document.getElementById('first').value;
+        var n2 = document.getElementById('second').value;
+        if(!isNaN(n1) && !isNaN(n2)) {
+            var num1 = parseInt(n1);
+            var num2 = parseInt(n2);
 
-            }
+            var r = `${num1}+${num2} = ${num1 + num2} <br/>`;
+            r += `${num1}-${num2} = ${num1 - num2} <br/>`;
+            r += `${num1}*${num2} = ${num1 * num2} <br/>`;
+            r += `${num1}/${num2} = ${num1 / num2} <br/>`;
 
-            console.log(r);
             document.getElementById("result").innerHTML = r;
+        }else{
+            document.getElementById("result").innerHTML = '값을 잘못입력하였습니다';
         }
+    }
     </script>
 
 </head>
 <body>
-<label>첫번째 수</label> : <input type="text" id="first"><br/>
-<label>두번째 수</label> : <input type="text" id="second"><br/>
-<input type="button" value="결과확인" onclck="cal(first,second)">
-<div>결과를 확인하시오.</div>
+첫번째 수 : <input type="text" id="first"><br/>
+두번째 수 : <input type="text" id="second"><br/>
+<input type="button" value="결과확인" onclick="calcu()"/>
+<div id="result">결과를 확인하시오.</div>
 </body>
 </html>

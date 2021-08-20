@@ -8,7 +8,7 @@
     </style>
     <script>
         // 연산자 : +,-,*,/,%,||,&&,!,>,<,>=,<=,+=,-=,*=...,++,--....
-        // if, if~else, while, for, do-while, break, continue, swith
+        // if, if~else, while, for, do-while, break, continue, switch
 
         //alert("페이지가로딩됨"); <!-- 대화상자 -->
 
@@ -17,10 +17,10 @@
         function gugudan(dan){
             var r = "";
             for(i=2; i<=9; i++){
-                r +=dan +"*"+i+"="+(dan*i)+"<br/>"; /*여러줄 출력하고싶어서 = 이나리 += 사용*/
+                r +=dan +"*"+i+"="+(dan*i)+"<br/>"; /*여러줄 출력하고싶어서 = 아니라 += 사용*/
             }
 
-            console.log(r);
+            console.log(r);// r+=라고 안써주면 console에 9*9 마지막구구단 밖에 안나옴
             document.getElementById("result").innerHTML = r; /* r의값 찍기 , r출력은 함수안에 잇어야한다*/
         }
 
@@ -40,7 +40,7 @@
         }
         */
         function imageChange(obj, n){
-            obj.src="../img/flower"+n+".jpg";
+            obj.src="../img/n+'.jpg'";
         }
 
     </script>
@@ -54,7 +54,7 @@
 <!-- <img src="../img/flower3.jpg" id="img" onmouseover="imageChange()" onmouseout="imageChange2()"/>  -->  <!-- 함수사용 -->
 <!-- <img src="../img/flower3.jpg" id="img" onmouseover="imageChange(1)" onmouseout="imageChange(3)"/> -->
 <!-- <img src="../img/flower3.jpg" id="img" onmouseover="this.src='../img/flower1.jpg'" onmouseout="this.src='../img/flower3.jpg'"/> -->
-<img src="../img/flower3.jpg" id="img" onmouseover="imageChange(this, 1)" onmouseout="imageChange(this, 3)"/>
+<img src="../img/1.jpg" id="img" onmouseover="imageChange(this, 1)" onmouseout="imageChange(this, 2)"/>
 </body>
 </html>
 

@@ -16,10 +16,10 @@
             var result = document.getElementById("chk").checked;
             if(result){//체크상태일때
                 //쿠키기록
-                //변수, 값, 소멸 시점
                 var now = new Date();
                 now.setDate(now.getDate()+1);
 
+                //변수, 값, 소멸 시점
                 var cookieData = "event=test;path=/;expires="+now+";";
 
              //   console.log(cookieData);

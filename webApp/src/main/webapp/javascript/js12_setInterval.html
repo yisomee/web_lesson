@@ -16,11 +16,10 @@
                     //호출함수      호출실행간격 시간간격(밀리초)
             interval = setInterval("moveScroll()", 500);//1초에 한번씩 호출됨 ->1초마다 20픽셀씩 아래로 내려간다
         }
-
     </script>
 </head>
-<body onload="setIntervalStart()" onmouseover="clearInterval(interval)" onmouseout="setIntervalStart()"> //반복실행은 온로드 메소드에서 하짐나 중단은 온마으서오버에서 해야함
-<h1>setInterval() : 일정한 시간 간격으로 함수르르 호출한다.</h1>
+<body onload="setIntervalStart()" onmouseover="clearInterval(interval)" onmouseout="setIntervalStart()"> //반복실행은 온로드 메소드에서 하지만 중단은 온마으서오버에서 해야함
+<h1>setInterval() : 일정한 시간 간격으로 함수를 호출한다.</h1>
 <h2>특징 : 호출은 한번으로 반복수행</h2>
 <h2>반복 실행 중단 : clearInterval()</h2>
 <script>

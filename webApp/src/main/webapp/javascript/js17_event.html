@@ -29,32 +29,82 @@
         }
         function cursorTest(id){
             id.style.fontSize = "3em";
-            id.style.backgroundColor = "pink";
+            id.style.backgroundColor = "#ddd";
         }
         function cursorTest2(blur){
             blur.style.fontSize="1em";
         }
+        function formCheck(){
+            if(document.frm.userid.value==""){ /*여기서 userid는 name 값이다 그래서 id값 필요없다*/
+                alert("아이디를 입력하세요");
+                return false;
+            }
+            if(document.getElementById("username").value==""){
+                alert("비밀번호를 입력하세요");
+                return false;//함수실행을 종료시킨다.
+            }
+            //javascript에서 submit발생시킨다.
+            document.getElementById("frm").submit();
+            //document.frm.submit(); //frm -> name
+        }
+        //userid에는 영문자만 입력되도록 설정하겠다
+        function  keyCheck(){
+            //방금 입력된 key의 코드를 구하면
+            //event라는 내장객체에서 구함 키를 누르면 다 가지고있음
+            var key = event.keyCode;//65~90 97~122
+            if(!(key>=65 && key<=90 || key>=97 && key<=122)){//영문자 &&, || 같이있으면 &&먼저 실행된다 그래서 괄호 안해도됨
+                //영문자 외의 문자가 입력됐을때 입력값을 취소
+                event.returnValue = false;
+            }
+        }
+        function dataChange(){
+            console.log("데이터 바뀜..");
+        }
+        function winSize(){//창의 크기가 바뀌면 호출된다
+            console.log("창의 크기가 변경됨");
+            window.resizeTo(800,800);
+
+        }//얼레벌레 넘어간거 다시 확인하기
+        window.resizeTo(800, 800);
         /*
       onmouseover, onmouseout : 이벤트객체 내부의 각 태그마다 이벤트가 발생한다.
 
       onmouseenter : over
       onmouseleave : out
 
-      onmousedown
-      onmouseup
+      onmousedown : 마우스 누를때
+      onmouseup : 마우스 뗄때
       onmousemove
 
       onfocus : 객체에 커서가 들어가면
       onblur : 객체에서 커서가 나가면
+
+      onsubmit :
+      onreset: 폼안에 데이터 지우는것
+
+      onkeydown: 누른상태
+      onkeypress: 누른상태
+      onkeyup : 누른 후 상태
+
+      onchange : value값이 변경되면 발생한다
+
      */
+
+        //서브밋 기능이 액션기능을 가지고 있다  인풋버튼은 서브밋기능 발생안함
     </script>
 
 </head>
 <body>
 <div>
-    <input type="text" name="userid" id="userid" onfocus="cursorTest(this)" onblur="cursorTest2(this)"/><br/><!--커서가 들어오면 함수가 실행됨-->
-    <input type="text" name="username" id="username" onfocus="cursorTest(this)" onblur="cursorTest2(this)"/><br/>
-    <input type="button" value="클릭"/><br/>
+    <form name="frm" id="frm" method="get" action="test.jsp">
+    <input type="text" name="userid" id="userid" onfocus="cursorTest(this)" onblur="cursorTest2(this)" onkeydown="keyCheck()"/><br/><!--커서가 들어오면 함수가 실행됨-->
+    <input type="text" name="username" id="username" onfocus="cursorTest(this)" onblur="cursorTest2(this)" onchange="dataChange()"/><br/>
+
+    <input type="button" value="클릭button" onclick="formCheck()"/><br/>
+    <input type="submit" value="submit"/><br/>
+    <input type="image" src="../img/1.jpg" value="submit"/>
+    <button>등록</button>
+    </form>
 </div>
 <!-- <div id="d1" onmouseover="mouseOverTest()" onmouseout="mouseOutTest()">-->
 <div id="d1" onmouseenter="mouseOverTest()" onmouseleave="mouseOutTest()" onmousedown="this.style.backgroundColor='yellow'">

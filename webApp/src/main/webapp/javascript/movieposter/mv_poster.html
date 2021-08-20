@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            width: 870px;
+            height: 114px;
+            display: flex;
+        }
+        input{
+            height: 114px;
+            width: 25px;
+        }
+        .container>div{
+            width: 820px;
+            background-color: yellow;
+            overflow: hidden;
+        }
+        #posterView{
+            width: 1640px;
+
+        }
+    </style>
+    <script>
+        //for문을 통한 이미지 삽입
+        function setPoster(){
+            var tag="";
+            for(var i=1; i<=20; i++){
+                tag +="<img src='movie"
+                if(i<10){
+                    tag += "0"+i+".png'/>";
+                }else{
+                    tag += i+".png'/>";
+                }
+            }
+            document.getElementById("posterView").innerHTML = tag;
+        }
+        var left=0, stepX=-5;
+        function movePoster(){
+            left=left+stepX;
+            document.getElementById("posterView").style.left = left;
+        }
+    </script>
+</head>
+<body onload="setPoster(); setInterval('setPoster()'', 500)";>
+<div class="container">
+    <input type="button"/>
+    <div>
+        <div id="posterView"></div>
+    </div>
+    <input type="button"/>
+</div>
+</body>
+</html>
