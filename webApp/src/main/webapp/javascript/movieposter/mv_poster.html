@@ -25,32 +25,16 @@
     </style>
     <script>
         //for문을 통한 이미지 삽입
-        function setPoster(){
-            var tag="";
-            for(var i=1; i<=20; i++){
-                tag +="<img src='movie"
-                if(i<10){
-                    tag += "0"+i+".png'/>";
-                }else{
-                    tag += i+".png'/>";
-                }
-            }
-            document.getElementById("posterView").innerHTML = tag;
-        }
-        var left=0, stepX=-5;
-        function movePoster(){
-            left=left+stepX;
-            document.getElementById("posterView").style.left = left;
-        }
+
     </script>
 </head>
-<body onload="setPoster(); setInterval('setPoster()'', 500)";>
+<body>
 <div class="container">
-    <input type="button"/>
+    <input type="button" value="◁"/>
     <div>
         <div id="posterView"></div>
     </div>
-    <input type="button"/>
+    <input type="button" value="▷"/>
 </div>
 </body>
 </html>
