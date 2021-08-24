@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(()=>{
+            //html() : 특정객체에 html 태그를 추가한다. => innerHTML
+            var tag = "<a href='https://www.daum.net'>다음으로 가기</a>";
+
+            $('#daum').html(tag);
+
+            console.log($('#daum').html());//여기 다시보기
+
+            //text() : 특정객체의 내용을 문자로 추가한다.
+            var tag2 = '문자로 추가된 <b>내용</b>이다.';
+
+            $('h2').children('a').text(tag2);   //$('h2>a')
+
+            //h2>a 의 href="https://www.nate.com"
+            $('h2>a').attr('href','https://www.nate.com');
+
+            //removeAttr() : 속성 지우기
+            $('a').removeAttr('href');//하고나면 페이지이동이 안됨 걸어놨던 링크를 삭제
+        });
+    </script>
+</head>
+<body>
+<h1 id="daum">객체조작 1</h1>
+<h2><a href="">객체조작 2</a></h2>
+<div id="result"></div>
+</body>
+</html>

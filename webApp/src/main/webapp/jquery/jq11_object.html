@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        ul,li{
+            margin: 5px;
+            padding: 0;
+            border: 3px solid gray;
+            float: left;
+            list-style-type: none;
+        }
+    </style>
+    <script>
+        $(()=>{
+            //before() : 선택자 이전에 객체 추가
+            $('#img').before('<li><img src="../img/2.jpg"/></li>');
+
+            //after() : 선택자 이전에 객체 추가
+            $('#img').after('<li><img src="../img/jeju_map.jpg"/></li>');
+
+            //insertBefore() : 선택자 이전에 객체 추가 $(추가할내용).insertBefore(선택자)
+            $('<li><img src="../img/tab2_4.png"/></li>').insertBefore('#img');
+
+            //insertAfter() : 선택자 다음에 객체 추가 $(추가할 내용).insertAfter(선택자)
+            $('<li id="copy"><img src="../img/1.jpg"/></li>').insertAfter('#img');
+
+            //append()
+            //appendTo()
+
+            //prepend() : 선택자의 내부내용중에 제일 앞에 추가
+            $('ul').prepend('<li>Prepend</li>');
+
+            //prependTo() To는 선택자가 오른쪽
+            $('<li><img src="../img/tab2_4.png"/></li>').prependTo('ul');//맨처음 와야하는에 안뜸 다시 확인해보기
+
+            //clone() : 선택자와 후손 전체를 복제한다, 한번만 사용할수있따.
+            var copyLi = $('#copy').clone();
+            // 아이디의 값을 변경
+            copyLi.attr('id', 'copy2');
+            $('ul').append(copyLi);
+
+            //empty() : 선택자의 내용을 삭제 만약 선택자가 ul이면 ul안의 내용삭제 li면 li내용 삭제
+            $("#copy").empty();
+
+            //remove() : 선택자를 지운다.
+            $('li:first').remove();
+
+            //replaceAll() : 선택자를 다른객체로 치환한다.
+            $('<h3>ReplaceAll</h3>').replaceAll('#copy2');//기존의 li도 사라짐 그래서 float left속성이 없어지고 다음줄에 배치됨
+
+            //replaceWith()  선택자가 왼쪽
+            $('#img').replaceWith('<h3>replaceWith</h3>');
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li id="img"><img src="../img/1.jpg"/></li>
+</ul>
+</body>
+</html>
