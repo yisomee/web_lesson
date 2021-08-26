@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    /*margin: 0 auto;*/
+}
+header{
+    width: 80%;
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+ul, li{
+    list-style-type: none;
+    font-size: 1em;
+}
+a{
+    text-decoration: none;
+    color: gray;
+    font-size: 1em;
+}
+nav{
+    display: flex;
+    text-align: center;
+    width: 80%;
+    border-top: 2px solid gray;
+    padding-top: 10px;
+
+}
+ul{
+    margin-top: 15px;
+    border: 2px solid gray;
+    /*position: absolute;*/
+
+    /*display: none;*/
+}
+div{
+    display: flex;
+    flex-direction: column;
+}
+li{
+    padding: 10px 36px;
+    color: gray;
+    font-size: 1em;
+}
+
+
+/*nav .mainMenu{*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    width: 80%;*/
+/*    padding-top: 12px;*/
+/*    padding-bottom: 12px;*/
+/*    border-top: 2px solid gray;*/
+/*}*/
+/*.outerMenu, .topMenu, .dressMenu, .bottomMenu, .summerMenu{*/
+/*    content-visibility: hidden;*/
+/*}*/
+
+section{
+    text-align: center;
+}
+section img{
+    width: 80%;
+}

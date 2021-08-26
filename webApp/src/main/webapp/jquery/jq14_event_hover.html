@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='jquery-3.6.0.js'></script>
+    <style>
+        .c1{
+            background-color: yellow;
+            color: red;
+        }
+        .c2{
+            background-color: pink;
+            color: blue;
+        }
+    </style>
+    <script>
+        $(()=>{
+            //hover는 이벤트 1개에 over, out2개 기능을 가진다.
+            var cnt=1;
+            //          오버시, 아웃시
+            $('h1').hover(function (){
+                //over
+                $(this).addClass('c1');
+
+                $(this).html( $(this).html()+'('+ cnt++ +")");
+
+                //이벤트 취소
+                if(cnt>10){
+                    $('h1').off();
+                }
+            },function (){
+                //out
+                $(this).removeClass('c1');
+            });
+
+            //이벤트가 한번 발생한다.
+            $('h2').one('click', function (){
+                console.log('one 이벤트 발생');
+                $(this).addClass('c2');
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>hover event 처리 테스트.....</h1>
+<h1>hover event 처리 테스트.....</h1>
+<h1>hover event 처리 테스트.....</h1>
+<h1>hover event 처리 테스트.....</h1>
+<h1>hover event 처리 테스트.....</h1>
+
+<h2>one event 처리 테스트.....</h2>
+<h2>one event 처리 테스트.....</h2>
+<h2>one event 처리 테스트.....</h2>
+<h2>one event 처리 테스트.....</h2>
+<h2>one event 처리 테스트.....</h2>
+</body>
+</html>

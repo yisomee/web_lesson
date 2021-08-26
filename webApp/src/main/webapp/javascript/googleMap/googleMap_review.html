@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #g, #geoMap{
+            height: 800px;
+            position: relative;
+            border: 1px solid gray;
+        }
+        #geocodeSearch{
+            position: absolute;
+            width: 400px;
+            top: 50px;
+            left: 400px;
+        }
+    </style>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiyi8IBKuUJnY0RccI6KvVWJslar5cPWg&callback=initMap"></script>
+    <script>
+        var latitude;
+        var longitude;
+
+        var map;
+        var geoCoder;
+        function initmap(){
+            //지도의 중심을 구한다
+            var myCenter = new google.maps.LatLng(latitude, longitude);
+            //지도에서 필요한 옵션을 json으로 추가한다
+            var option = {
+                center : myCenter,
+                zoom:12,//숫자가 클수록 크게 보임
+                mapTypeId : google.maps.MapTypeId.ROADMAP//지도종류
+            }
+            //                         지도를 표시할곳                 지도의 옵션
+            map = new google.maps.Map(document.getElementById('geoMap'),option);
+
+            geoCoder = new google.maps.Geocoder();
+
+        }
+    </script>
+</head>
+<body>
+<div id="g">
+    <div id="geocodeSearch">
+        <input type="text" id="address" value="신촌역"/>
+        <input type="button" value="Search">
+    </div>
+    <div id="geoMap"></div>
+</div>
+</body>
+</html>

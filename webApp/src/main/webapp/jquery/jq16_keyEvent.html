@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='jquery-3.6.0.js'></script>
+    <style>
+        #content{
+            width: 400px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        $(function (){
+            $('#content').keyup(function (){
+                //textarea -> value -> 글자수
+                var str = $('#content').val();//문자
+                var cnt = str.length;//글자수
+                $('span').text(100-cnt);
+            })
+
+        });
+
+    </script>
+</head>
+<body>
+<label>남은 문자 : <span>100</span></label><br/>
+<textarea id="content" maxlength="100"></textarea>
+</body>
+</html>

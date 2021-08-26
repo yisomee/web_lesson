@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='jquery-3.6.0.js'></script>
+    <title>Title</title>
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        $(()=>{
+            //이미지를 클릭하면 이미지가 추가되는 이벤트
+            $('img').first().click(function (){
+                $(this).parent().append('<img src="../img/1.jpg"/>');
+            });
+
+            //trigger : 이벤트를 자동으로 발생시키는것
+            //                      이벤트 종류
+
+            //setInterval(), setTimeout()
+            setInterval(function (){
+            $('img').first().trigger('click');
+            }, 500);//실행문이 자동실행되어 0.5초에 하나씩 늘어난다
+        });
+    </script>
+</head>
+<body>
+<img src="../img/3.jpg"/>
+</body>
+</html>

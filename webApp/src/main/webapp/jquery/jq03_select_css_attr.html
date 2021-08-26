@@ -15,7 +15,9 @@
             $('body').css("background-color","pink");
             $('#userid').attr('value', 'goguma');
             $("#userid").attr('type','password');
-            $('#userid').prop("readonly", true);
+            $('#userid').prop("readonly", true);//지우는게 안됨
+            //attr 속성값을 정해줘야하는
+            //prop form태그내의 selected나 checked 같은거 지정할때
 
             //img에게 폭, 높이, 보더
             $("img").css('width','200px').css('height','250px').css('border', '2px solid red');

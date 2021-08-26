@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        div{font-size:1in;}
+    </style>
+    <script>
+        $(function(){
+            //컬러명
+            var rgb = ['rgb(255,0,0)','#00f','yellow','#888','pink','orange'];
+            //컬러코드
+            var colorName=['빨강','파랑','노랑','회색','핑크','오렌지'];
+            //
+            var tag = "<select>"
+            //                  값, index
+            colorName.map(function(i, j){
+                tag += "<option value='"+ rgb[j]+"'>"+i+"</option>";
+            });
+            tag += "</select>";
+
+            $('body').prepend(tag);
+            /////////////////////////////
+            $("select").change(function(){
+                $('div').css('color' , $('select').val());
+            });
+            $("input[type=button]").on('click',function(){
+                //이벤트가 발생한 버튼의 index를 구한다.
+                var idx = $("input[type=button]").index(this);//0 1 2 중에
+
+                //현재 글자 크기
+                var nowSize = parseInt($("div").css('font-size'));//16px
+                console.log(nowSize);
+
+                if(idx==0){
+                    $('div').css('font-size', nowSize -1 +"px");
+                }else if(idx==1){
+                    $('div').css('font-size','16px');
+                }else if(idx==2){
+                    $('div').css('font-size', nowSize +1 +"px");
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+<input type="button" value=" - ">
+<input type="button" value=" 0 ">
+<input type="button" value=" + ">
+
+<div>
+    7월 말 현재 전국의 자동차 등록대수는 2470만대에 이르며 이 가운데 전기차는 18만대가 있는 것으로 나타났다. 전기차를 포함해 하이브리드, 수소차 등을 모두 합한 친환경차는 100만대를 돌파했다. 또 올들어 가장 많이 팔린 전기차는 현대차의 화물 전기차인 포터Ⅱ인 것으로 집계됐다.
+
+    국토교통부는 “7월 자동차 등록대수는 누적으로 2470만 대를 기록해 한달 전보다 6만 1000대가 늘었고 2020년 말보다는 34만대가 증가했다”고 25일 밝혔다. 부산의 경우 7월 현재 자동차등록대수가 145만 1280대로 한달 전보다 3340대가 증가했다.
+
+    전국적으로 7월 신규등록(이전등록 제외) 차량은 15만 9804대인데 이 가운데 수입차는 16.5%며 국산차는 83.5%의 점유율을 보였다.
+
+    전기차는 국민들의 높은 관심 속에서 2019년 말 9만 대에서, 1년 반 만에 누적대수 18만 966대로 배가 증가했다. 지역별로는 서울·경기·제주도에 전기차의 46.6%가 있었으며 부산은 8824대로 4.9%로 비중이 그리 크지 않았다.
+
+    특히 전기·하이브리드·수소차를 모두 합한 친환경차는 전국에 100만 3539대로, 100만대를 돌파했다. 부산은 전기차 8824대와 하이브리드 4만 9818대, 수소차 1193대로 친환경차가 모두 5만 9835대가 등록돼 있다.
+
+    한편 전기차는 현대차가 44.6%, 기아차 20.3%, 테슬라 14.8% 순으로 등록대수가 많았다.
+
+    또 전기차 구매자의 연령은 40~50대가 57%로 가장 많고 이어서 60대, 30대 순이었다. 개인명의로는 70%, 법인명의는 30%였다.
+
+    올해 1~7월 신규등록 전기차(4만 7508대) 모델을 살펴보면 포터Ⅱ(9793대), 아이오닉5(8628대), 테슬라 모델3(6291대), 봉고Ⅲ(6047대) 순으로, 화물 전기차 등록대수가 1만 5840대에 이르러 화물차 운전자들의 관심이 매우 높은 것을 알 수 있었다.
+
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='jquery-3.6.0.js'></script>
+    <title>Title</title>
+    <script>
+        //jquery의 이벤트 종류
+        /*
+        * onclick, onmouseover(enter), onmouseout(leave), onchange, onload, onunload, onscroll,
+        * onfocus, onsubmit, onresize,
+        * onkeydown, onkeyup, onkeypress, onkeyrelease,
+        * ondbclick, onreset, onblur
+        * */
+        $(()=>{
+         `` //=============이벤트 처리방법 1
+            $('h1').click(function (){
+                //이벤트 처리하기
+                //this : 현재 이벤트가 발생한 태그 객체
+                $(this).css('background-color', 'yellow');//방금 클릭이벤트가 발생한 h1가 선택된거
+                $(this).text('클릭이벤트가 발생함.');
+
+            });
+            //===================이벤트 처리방법2
+            $('h2').on('click', function (){
+                $(this).css('background-color', 'lightblue');
+
+            });
+
+            //=================이벤트 처리방법3
+            //두가지 이벤트가 동시에 일어날때
+            // onmouseover(onmouseenter), onmouseout(onmouseleave)
+            //마우스 오버시 : 배경을 pink 마우스 아웃 시 : 배경을 흰색으로
+            $('h3').on({
+                mouseenter: function (){
+                    //실행문
+                    $(this).css('background-color', 'pink');
+                }, mouseleave: function (){
+                    $(this).css('background-color', '#fff');
+                }
+            });
+
+            //==============이벤트 처리방법 4
+            //한 객체에 하나이상의 이벤트가 같은 작업을 수행할때
+            $('input').on('click focus', function (){
+                $(this).val('click 또는 focus 이벤트가 발생함');
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>jquery 이벤트 테스트</h1>
+<h1>jquery 이벤트 테스트</h1>
+<h1>jquery 이벤트 테스트</h1>
+<h1>jquery 이벤트 테스트</h1>
+<h1>jquery 이벤트 테스트</h1>
+
+<h2>jquery 이벤트 테스트</h2>
+<h2>jquery 이벤트 테스트</h2>
+<h2>jquery 이벤트 테스트</h2>
+<h2>jquery 이벤트 테스트</h2>
+<h2>jquery 이벤트 테스트</h2>
+<h2>jquery 이벤트 테스트</h2>
+
+<h3>jquery 이벤트 테스트</h3>
+<h3>jquery 이벤트 테스트</h3>
+<h3>jquery 이벤트 테스트</h3>
+<h3>jquery 이벤트 테스트</h3>
+<h3>jquery 이벤트 테스트</h3>
+<h3>jquery 이벤트 테스트</h3>
+
+<input type="button" value="12345">
+<input type="button" value="abcde">
+<input type="button" value="가나다라">
+</body>
+</html>

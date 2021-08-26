@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='jquery-3.6.0.js'></script>
+    <title>Title</title>
+    <script>
+        $(function (){
+           $('#hide').click(function (){
+               //        숨기는 속도 'slow','fast','normal', 밀리초
+              $('img').first().hide(3000);//hide() -> 함수 /폭,높이가 작아지고 점점흐려짐
+           });
+           //보여주기
+           $('#show').click(()=>{
+               $('img:first').show(3000);
+           });
+           //없으면 보여주고 있으면 숨기기 ->toggle
+            $('#toggle').click(function (){
+                $('img:first').toggle(3000);
+            });
+            //점점흐리게, 점점진하게, fadeIn, fadeOut
+            $('#fadeIn').click(function (){
+                //                          콜백함수
+                $('img:first').fadeIn(3000, function (){
+                    alert('fadeIn 콜백함수 실행됨.');
+                });
+            });
+            $('#fadeOut').click(function (){
+                $('img:first').fadeOut(3000);
+            });
+            $('#fadetoggle').click(function (){
+                $('img:first').fadeToggle('3000');
+            });
+
+            //slideUp, slideDown, slideToggle
+            $('#slideUp').on('click', ()=>{
+                $('img:first').slideUp(3000, function (){
+                    console.log('slideUp 실행됨');
+                });
+            });
+
+            $('#slideDown').on('click', ()=>{
+                $('img:first').slideDown(3000);
+            });
+
+            $('#slideToggle').on('click', ()=>{
+                $('img').slideToggle(3000)
+            });
+        });
+    </script>
+</head>
+<body>
+<button id="hide">숨기기(hide)</button>
+<button id="show">보여주기(show)</button>
+<button id="toggle">hide&show</button>
+<button id="fadeIn">점점진하게</button>
+<button id="fadeOut">점점흐리게</button>
+<button id="fadetoggle">fadeIn,fadeOut</button>
+
+<button id="slideUp">점점위로</button>
+<button id="slideDown">점점아래로</button>
+<button id="slideToggle">slideUp,slideDown</button>
+<hr/>
+<img src="../img/1.jpg"/><br/>
+<img src="../img/3.jpg"/>
+</body>
+</html>

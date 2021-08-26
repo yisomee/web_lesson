@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='jquery-3.6.0.js'></script>
+    <script>
+        $(function (){
+            $('#main').click(function (){
+                $(this).css('background-color', 'pink');
+            });
+            $('#main').mouseleave(function (){
+                $(this).css('background-color', 'yellow');
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div id="main">선택되었습니다</div>
+</body>
+</html>
