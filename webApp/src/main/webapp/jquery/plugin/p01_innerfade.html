@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--
+        inerfade api
+
+        https://gist.github.com/coolniikou/665255
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="jquery.innerfade.js"></script>
+    <style>
+        ul,li{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #innerImg img{
+            width: 600px;
+            height: 450px;
+        }
+        div:nth-child(2){
+            width: 600px;
+            height: 300px;
+            background-color: coral;
+        }
+    </style>
+    <script>
+        $(()=>{
+           //이미지에 innerfade적용하기
+            $('#innerImg').innerfade({
+                animationtype:'slide'// 'slide' , 'fade'(기본),
+                ,sqeed:5000 // 'slow', 'fast','normal', 밀리초
+                ,timeout:1000 // 쇼대기 시간
+                ,type: 'random_start'//'random', 'sequence'(기본값 시퀀스), 'random_start' 목록을 랜덤으로 보일건지 순서대로 보일건지
+            });
+            $('#innerTxt').innerfade({
+                animationtype:'fade',
+                speed:1000,
+                timeout:3000,
+                type:'random'
+            });
+        });
+    </script>
+</head>
+<body>
+<!-- 이미지를 이용한 innerfade -->
+<div style="height: 450px">
+    <ul id="innerImg">
+        <li><a href="https://www.nate.com"><img src="../../img/ex5.jpg"/></a></li>
+        <li><a href="https://www.nate.com"><img src="../../img/ex1.jpg"/></a></li>
+        <li><a href="https://www.nate.com"><img src="../../img/ex2.jpg"/></a></li>
+        <li><a href="https://www.nate.com"><img src="../../img/ex3.jpg"/></a></li>
+        <li><a href="https://www.nate.com"><img src="../../img/ex4.jpg"/></a></li>
+        <li><a href="https://www.nate.com"><img src="../../img/1.jpg"/></a></li>
+        <li><a href="https://www.nate.com"><img src="../../img/2.jpg"/></a></li>
+        <li><a href="https://www.nate.com"><img src="../../img/3.jpg"/></a></li>
+    </ul>
+</div>
+<div>
+    <ul id="innerTxt">
+        <li>조 바이든 미국 대통령이 26일(현지 시간) 카불공항 폭탄 테러와 관련해 “우리는 그들을 찾아내 대가를 치르게 하겠다”고 다짐했다.</li>
+        <li>바이든 대통령은 이날 백악관에서 열린 대국민 연설에서 공격을 한 이들을 용서하지 않을 것이며 이들에 대한 공격계획 수립을 지시했다고 밝혔다.</li>
+        <li>그는 이슬람국가(IS)의 지부를 자처하는 ‘IS-K’가 이번 일을 저질렀다는 게 정보당국의 평가라고 설명했다. </li>
+        <li>바이든 대통령은 “IS-K가 아프간에 있는 미국인들에 대해 다양한 공격을 계획해왔고 이 때문에 임무 시한을 제한하기로 했었다”며 “아프간으로부터의 대피는 계속될 것이다</li>
+        <li> 동시에 카불 내 병력을 보호하기 위해 필요한 조치를 하라고 지시했다”고 전했다.</li>
+        <li>이날 카불공항에 대한 자살폭탄 공격으로 아프간인 최소 60명과 미군 12명이 숨졌다.</li>
+        <li>지난 23일 커뮤니티 '보배드림'에 '승차건 관심 갖고 도와주세요'라는 글이 올라왔다. 글쓴이는 아버지가 택시기사라고 설명했다.</li>
+    </ul>
+</div>
+</body>
+</html>

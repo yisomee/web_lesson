@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+        https://github.com/alaingoga
+
+        1.accordionImageMenu.css
+        2.jquery
+        3.jquery ui
+        4.accordionImageMenu.js
+
+    -->
+    <link rel="stylesheet" href="accordionImageMenu.css" type="text/css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../jquery-ui.js"></script>
+    <script src="jquery.accordionImageMenu.js"></script>
+    <script>
+        $(function (){
+           $('#accordionImg').AccordionImageMenu({
+               position:'horizontal',//'horizontal', 'vertical'
+               openItem: 3, //처음실행될때 확장되어서 보이는 이미지의 index
+               openDim: 500,//확장된 목록의 폭설정
+               closeDim : 200 //닫힌 목록의 폭설정
+
+               //width:vertical일때 적용하는것 height:horizontal일떄 적용
+               ,height:600
+               // ,width:800
+               ,duration: 3000
+               ,effect:'easeOutBounce'//easing 움직이는 모양
+
+           });
+        });
+    </script>
+</head>
+<body>
+<ul id="accordionImg">
+    <li><a href="https://www.nate.com"><img src="../../img/ex5.jpg"/></a></li>
+    <li><a href="https://www.nate.com"><img src="../../img/ex1.jpg"/></a></li>
+    <li><a href="https://www.nate.com"><img src="../../img/ex2.jpg"/></a></li>
+    <li><a href="https://www.nate.com"><img src="../../img/ex3.jpg"/></a></li>
+    <li><a href="https://www.nate.com"><img src="../../img/ex4.jpg"/></a></li>
+    <li><a href="https://www.nate.com"><img src="../../img/1.jpg"/></a></li>
+    <li><a href="https://www.nate.com"><img src="../../img/2.jpg"/></a></li>
+    <li><a href="https://www.nate.com"><img src="../../img/3.jpg"/></a></li>
+</ul>
+</body>
+</html>
