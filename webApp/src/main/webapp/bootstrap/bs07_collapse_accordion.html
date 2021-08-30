@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <meta name="viewport" content="width=device,initial-scale=1"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<h1>Collapse에</h1>
+<!--버튼을 클릭하면 이미지가 접혔다가 펴졌다가-->
+<button class="btn btn-success" data-target="#view1" data-toggle="collapse">클릭하세요.</button>
+<div id="view1" class="collapse show">
+    <img src="../img/ex5.jpg" alt="">
+</div>
+<hr/>
+<button class="btn btn-success" data-target="#view2" data-toggle="collapse">클릭하면 내용나오기</button>
+<div id="view2" class="collapse show">
+    9일 충북 진천의 일부 주민들은 카카오톡 오픈채팅방에 '아프간 난민 의견방'을 만들고 법무부 등에 전달할 요구 사항 취합에 나섰다.
+
+    이들은 정부에 신종 코로나바이러스 감염증(코로나19) 방역 대책과 함께 국가공무원인재개발원에 임시 거처를 마련한 아프간인들이 숙소를 이탈하거나 테러와 같은 위급 상황이 발생할 가능성을 대비한 대책 마련을 촉구하고 있다. 일부 주민들 사이에선 6주 정도의 인재개발원 생활이 마무리되면, 아프간인들이 진천에 계속 정착하지 못하도록 해야 한다는 주장도 나오고 있다.
+
+    이 같은 주민들의 입장은 앞서 인재개발원이 자리 잡은 진천군 덕산읍 주민과 이장단이 지난 24일 대책회의를 통해 수용 의사를 밝혔던 것과는 다소 차이가 있다. 당시 이시종 충북지사는 "일부 불만이 없진 않았지만, 주민들이 대승적 차원에서 양해했다"고 밝혔다. 진천군도 이들의 도착에 맞춰 도로변에 '대한민국은 여러분의 아픔을 함께한다. 머무는 동안 편하게 지내다 가길 바란다'는 현수막을 걸었다
+
+</div>
+<h1>Accordion 예</h1>
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" data-target="#a1" data-toggle="collapse">아코디언 적용예제1111</div>
+        <div class="collapse" id="a1">
+            9일 충북 진천의 일부 주민들은 카카오톡 오픈채팅방에 '아프간 난민 의견방'을 만들고 법무부 등에 전달할 요구 사항 취합에 나섰다.
+
+            이들은 정부에 신종 코로나바이러스 감염증(코로나19) 방역 대책과 함께 국가공무원인재개발원에 임시 거처를 마련한 아프간인들이 숙소를 이탈하거나 테러와 같은 위급 상황이 발생할 가능성을 대비한 대책 마련을 촉구하고 있다. 일부 주민들 사이에선 6주 정도의 인재개발원 생활이 마무리되면, 아프간인들이 진천에 계속 정착하지 못하도록 해야 한다는 주장도 나오고 있다.
+
+            이 같은 주민들의 입장은 앞
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" data-target="#a2" data-toggle="collapse" >아코디언 적용예제2222</div>
+        <div class="collapse" id="a2">
+            <img src="../img/ex5.jpg" alt=""/>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" data-target="#a3" data-toggle="collapse" >아코디언 적용예제3333</div>
+        <div  class="collapse" id="a3">
+            9일 충북 진천의 일부 주민들은 카카오톡 오픈채팅방에 '아프간 난민 의견방'을 만들고 법무부 등에 전달할 요구 사항 취합에 나섰다.
+
+            이들은 정부에 신종 코로나바이러스 감염증(코로나19) 방역 대책과 함께 국가공무원인재개발원에 임시 거처를 마련한 아프간인들이 숙소를 이탈하거나 테러와 같은 위급 상황이 발생할 가능성을 대비한 대책 마련을 촉구하고 있다. 일부 주민들 사이에선 6주 정도의 인재개발원 생활이 마무리되면, 아프간인들이 진천에 계속 정착하지 못하도록 해야 한다는 주장도 나오고 있다.
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
