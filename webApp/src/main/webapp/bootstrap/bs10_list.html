@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <h1>ul태그를 이용한 목록만들기</h1>
+    <ul class="list-group"> <!-- class="list-group":마진,패딩이 없어짐 -->
+        <!--  class="list-group-item": 칸과패딩이생김 -->
+        <li class="list-group-item"><a href="#">코로나19로 경제적 피해를 입은 소상공인이라면 다음 달 3일까지 '희망회복자금'을 놓치지 말고 신청하시기 바랍니다.</a></li>
+        <li class="list-group-item list-group-item-primary"><a href="#">신청 당일에도 받을 수 있다는데요.</a></li>
+        <li class="list-group-item"><a href="#">중소벤처기업부에 따르면, 희망회복자금 2차 신속 지급으로 소상공인과 소기업 61만여 곳에 1조 원이 지급될 예정이라는데요.</a></li>
+        <li class="list-group-item"><a href="#">지원 대상은 간이과세자와 올해 3~6월 신규 창업자, 여러 사업체 운영자 등으로,1차 신속 지급 대상을 포함하면 모두 194만 5천 곳에 달한다고 합니다.</a></li>
+    </ul>
+
+
+    <h1>a태그를 이용한 목록 만들기</h1>
+    <div class='list-group'>
+        <!-- a태그라서 줄이 안바뀜 -> class=-list-group-item 을쓰면 a태그마다 줄이바뀌고 테두리가생김 -->
+        <a href="#" class="list-group-item">코로나19로 경제적 피해를 입은 소상공인이라면 다음 달 3일까지 '희망회복자금'을 놓치지 말고 신청하시기 바랍니다.</a>
+        <a href="#" class="list-group-item">신청 당일에도 받을 수 있다는데요.</a>
+        <a href="#" class="list-group-item list-group-item-success">중소벤처기업부에 따르면, 희망회복자금 2차 신속 지급으로 소상공인과 소기업 61만여 곳에 1조 원이 지급될 예정이라는데요.</a>
+        <a href="#" class="list-group-item">
+            <h2>코로나19</h2>
+            <p>지원 대상은 간이과세자와 올해 3~6월 신규 창업자, 여러 사업체 운영자 등으로,1차 신속 지급 대상을 포함하면 모두 194만 5천 곳에 달한다고 합니다.</p>
+        </a>
+    </div>
+    <h1>div태그를 이용한 목록 만들기</h1>
+    <div class='list-group'>
+        <div class="list-group-item">코로나19로 경제적 피해를 입은 소상공인이라면 다음 달 3일까지 '희망회복자금'을 놓치지 말고 신청하시기 바랍니다.</div>
+        <div class="list-group-item">신청 당일에도 받을 수 있다는데요.</div>
+        <div class="list-group-item list-group-item-warning">중소벤처기업부에 따르면, 희망회복자금 2차 신속 지급으로 소상공인과 소기업 61만여 곳에 1조 원이 지급될 예정이라는데요.</div>
+        <div class="list-group-item">지원 대상은 간이과세자와 올해 3~6월 신규 창업자, 여러 사업체 운영자 등으로,1차 신속 지급 대상을 포함하면 모두 194만 5천 곳에 달한다고 합니다.</div>
+    </div>
+</div>
+</body>
+</html>

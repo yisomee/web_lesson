@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <img src="tab5.png" data-target='#md' data-toggle="modal"/><br/> <!-- 모달에 id설정하고나서 data-target설정하면 이미지누르면 모달창이 열림-->
+    <img src="tab6.png" data-target='#md' data-toggle="modal"/><br/>
+    <img src="tab7.png" data-target='#md' data-toggle="modal"/><br/>
+
+    <!-- modal Content -->
+    <div class='modal' id="md"> <!-- 전체를묶는곳에설정 -->
+        <div class='modal-dialog'>
+            <div class='modal-content'> <!-- modal-dialog,content다쓰고나면 아래디브가화면에뜨지않음 -->
+                <!-- header -->
+                <div class='modal-header'> <!-- modal-header:div안의내용들이 한줄로 나온다 -->
+                    <h4 class="modal-title">모달테스트</h4>
+                    <button class="close" data-dismiss="modal">&times</button>
+                </div>
+                <!-- body -->
+                <div class='modal-body'>
+                    <h2>모달컨텐츠</h2>
+                    <img src='../img/pang.gif' style="width:100%"/>
+                </div>
+                <!-- foot -->
+                <div class='modal-footer'>
+                    <button class='btn btn-secondary' data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

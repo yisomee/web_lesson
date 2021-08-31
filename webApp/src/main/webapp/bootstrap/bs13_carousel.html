@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <style>
+        .carousel-inner img{width:100%; height:300px;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="slideImg" class="carousel slide" data-ride="carousel" data-interval='2000'> <!-- carousel -->
+        <!-- 아이콘 -->
+        <ul class="carousel-indicators">
+            <li data-target='#slideImg' data-slide-to='0' class='active'></li><!-- data-slide-to:클릭하면 indext순대로의 사진이 보이게설젇ㅇ -->
+            <li data-target='#slideImg' data-slide-to='1'></li>
+            <li data-target='#slideImg' data-slide-to='2'></li>
+        </ul>
+        <!-- 슬라이딩이미지목록 -->
+        <div class="carousel-inner">
+            <!--  ====== 1 ====== -->
+            <div class='carousel-item active'>
+                <img src="../img/flower1.jpg"/>
+                <!-- 이미지위의 설명서 -->
+                <div class='carousel-caption'> <!-- 위에올라가게 설정 -->
+                    <h2>로스엔젤리스</h2>
+                    <p>ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ</p>
+                </div>
+            </div>
+            <!--  ====== 2 ====== -->
+            <div class='carousel-item'>
+                <img src="../img/pang.gif"/>
+                <!-- 이미지위의 설명서 -->
+                <div class='carousel-caption'>
+                    <h2>로스엔젤리스</h2>
+                    <p>ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ</p>
+                </div>
+            </div>
+            <!--  ====== 3 ====== -->
+            <div class='carousel-item'>
+                <img src="../img/flower3.jpg"/>
+                <!-- 이미지위의 설명서 -->
+                <div class='carousel-caption'>
+                    <h2>로스엔젤리스</h2>
+                    <p>ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ</p>
+                </div>
+            </div>
+        </div>
+        <!-- 좌우이동버튼 -->
+        <a href="#slideImg" class='carousel-control-prev' data-slide='prev'><span class='carousel-control-prev-icon'></span></a><!-- 화살표나오게하는클래스 -->
+        <a href="#slideImg" class='carousel-control-next' data-slide='next'><span  class='carousel-control-next-icon'></span></a>
+    </div>
+
+</div>
+</body>
+</html>
