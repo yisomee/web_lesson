@@ -44,7 +44,7 @@
 			
 		%>
 			<li><%=vo.getNo() %></li>
-			<li><a href="#?no=<%=vo.getNo() %>"><%=vo.getSubject() %></a></li>
+			<li><a href="<%= request.getContextPath() %>/board/boardView.jsp?no=<%= vo.getNo() %>"><%= vo.getSubject() %></a></li>
 			<li><%=vo.getUserid() %></li>
 			<li><%=vo.getWritedate() %></li>
 			<li><%=vo.getHit() %></li>

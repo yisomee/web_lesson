@@ -53,7 +53,93 @@ public class BoardDAO extends DBConnection {
 		return list;
 	}
 	//글1개 선택
+	public BoardVO oneRecordSelect(int no, int part) {
+		BoardVO vo = new BoardVO();
+		try {
+			//조회수 증가
+			if(part==1) {//1:글내용정보, 2:글수정폼
+				hitCount(no);
+			}
+			dbConn();
+			sql = "select no, subject, content, userid, writedate, hit from board where no=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, no);
+			
+			rs = pstmt.executeQuery();//레코드가 한개
+			
+			if(rs.next()) {
+				vo.setNo(rs.getInt(1));
+				vo.setSubject(rs.getString(2));
+				vo.setContent(rs.getString(3));
+				vo.setUserid(rs.getString(4));
+				vo.setWritedate(rs.getString(5));
+				vo.setHit(rs.getInt(6));
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		return vo;//디비 닫기전에 리턴하면 디비가 안닫김 디비 닫기고 나서 리턴해야함
+	}
 	//글 수정
+	public int boardUpdate(BoardVO vo) {
+		int result=0;
+		try {
+			dbConn();
+			sql = "update board set subject=?, content=? where no=? and userid=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, vo.getSubject());
+			pstmt.setString(2, vo.getContent());
+			pstmt.setInt(3, vo.getNo());
+			pstmt.setString(4, vo.getUserid());
+			
+			result=pstmt.executeUpdate();
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		return result;
+	}
+	//글삭제
+	public int boardDelete(int no, String userid) {
+		int result = 0;
+		try {
+			dbConn();
+			sql = "delete from board where no=? and userid=?";
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, no);
+			pstmt.setString(2, userid);
+			
+			result = pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		return result;
+	}
 	//조회수 증가
+	public void hitCount(int no) {
+		try {
+			dbConn();
+			
+			sql = "update board set hit = hit +1 where no=?";
+			
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, no);
+			
+			pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+	}
 	
 }
